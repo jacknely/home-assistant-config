@@ -1,10 +1,57 @@
-
+####################################################
+#                                                  #
+#                Default Config                    #
+#                                                  #
+####################################################
+# https://www.home-assistant.io/integrations/default_config/
 # Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+#default_config:
+person:
+updater:
+zone:
+zeroconf:
+system_health:
+sun:
+ssdp:
+map:
+logbook:
+config:
+history:
+api:
+logger:
+  default: info
+
+####################################################
+#                                                  #
+#                   CUSTOMIZING                    #
+#                                                  #
+####################################################
+# https://www.home-assistant.io/docs/configuration/customizing-devices/
+# https://home-assistant.io/docs/configuration/basic/
+homeassistant:
+  external_url: "https://jacknelson.info"
+  internal_url: "http://192.168.1.121:8123"
+  latitude: 51.4665
+  longitude: -0.1416
+  unit_system: metric
+  elevation: 9
+  auth_providers:
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 127.0.0.1
+        - ::1
+        - fd00::/8
+  time_zone: Europe/London
+  whitelist_external_dirs:
+    - /config
 
 # Text to speech
 tts:
   - platform: google_translate
+
+alexa:
+  smart_home:
 
 group: !include groups.yaml
 automation: !include automations.yaml

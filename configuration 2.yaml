@@ -1,0 +1,86 @@
+default_config:
+  unit_System: metric
+
+homeassistant:
+  external_url: "https://jacknelson.info"
+  internal_url: "http://192.168.1.121:8123"
+  latitude: 51.4665
+  longitude: -0.1416
+  elevation: 9
+  auth_providers:
+   - type: homeassistant
+   - type: trusted_networks
+     trusted_networks:
+       - 127.0.0.1
+       - ::1
+       - fd00::/8
+  time_zone: Europe/London
+  whitelist_external_dirs:
+    - /config
+
+script: !include scripts.yaml
+
+alexa:
+   smart_home:
+
+http:
+  base_url: floris.jackn-home.duckdns.org
+
+api:
+
+logger:
+  default: info
+  logs:
+    homeassistant.components.smartthings: debug
+
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+scene: !include scenes.yaml
+discovery:
+conversation:
+updater:
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+utility_meter:
+  hourly_energy:
+    name: "Hourly Energy Consumption"
+    source: sensor.bulb_energy_meter_energy_meter
+    cycle: hourly
+  daily_energy:
+    name: "Daily Energy Consumption"
+    source: sensor.bulb_energy_meter_energy_meter
+    cycle: daily
+  weekly_energy:
+    name: "Weekly Energy Consumption"
+    source: sensor.bulb_energy_meter_energy_meter
+    cycle: weekly
+  monthly_energy:
+    name: "Monthly Energy Consumption"
+    source: sensor.bulb_energy_meter_energy_meter
+    cycle: monthly
+
+sensor:
+   - platform: derivative
+     name: "Current Electricity Usage (kW)"
+     source: sensor.bulb_energy_meter_energy_meter
+
+   - platform: template
+     sensors:  
+        current_electricity_usage_w:
+          friendly_name: "Current Electricity Usage"
+          unit_of_measurement: 'W'
+          icon_template: mdi:flash
+          value_template: "{{ (states('sensor.current_electricity_usage_kw')|float * 1000)}}"
+
+   - platform: template
+     sensors:  
+       daily_electricity_cost:
+         friendly_name: "Daily Electricity Usage Cost"
+         unit_of_measurement: '£'
+         icon_template: mdi:cash
+         value_template: "{{ ((states('sensor.daily_energy')|float * 0.1608) + 0.1979)|round(2)}}"
