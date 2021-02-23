@@ -57,3 +57,19 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+####################################################
+#                                                  #
+#                       MQTT                       #
+#                                                  #
+####################################################
+mqtt:
+  discovery: true
+  broker: 192.168.1.154
+  port: 1883
+  birth_message:
+    topic: "homeassistant/status"
+    payload: "online"
+  will_message:
+    topic: "homeassistant/status"
+    payload: "offline"
