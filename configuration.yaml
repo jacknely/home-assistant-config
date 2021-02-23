@@ -65,8 +65,7 @@ scene: !include scenes.yaml
 ####################################################
 mqtt:
   discovery: true
-  broker: 192.168.1.154
-  port: 1883
+  broker: 192.168.1.154:1883
   birth_message:
     topic: "homeassistant/status"
     payload: "online"
