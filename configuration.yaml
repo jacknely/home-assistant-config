@@ -52,6 +52,7 @@ tts:
 
 alexa:
   smart_home:
+mobile_app:
 
 group: !include groups.yaml
 automation: !include automations.yaml
