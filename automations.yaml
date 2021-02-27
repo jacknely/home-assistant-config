@@ -20,21 +20,20 @@
     service: light.turn_off
     entity_id: light.desk
 
-- alias: "Turn bedroom lights on when Jack is home"
+- id: e6d88513c8e44aaf959d79f90b0bf211
+  alias: Turn bedroom lights on when Jack is home
   trigger:
-    platform: sun
-    event: sunset
-    offset: "-00:45:00"
   condition:
-    - condition: or
-      conditions:
-        - before: sunrise
-          condition: sun
-        - after: sunset
-          condition: sun
     - condition: state
-      entity_id: person.jack
-      state: home
+      entity_id: sun.sun
+      state: below_horizon
+    - condition: numeric_state
+      entity_id: sun.sun
+      value_template: "{{ state.attributes.elevation }}"
+      below: 2.0
+    - condition: state
+      entity_id: light.sofa
+      state: "off"
   action:
-    service: light.turn_on
-    entity_id: light.sofa, light.bed
+    - entity_id: light.sofa
+      service: light.turn_on
