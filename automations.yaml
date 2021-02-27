@@ -2,7 +2,7 @@
   trigger:
     platform: state
     entity_id: binary_sensor.desk_sensor
-    to: "Detected"
+    to: "on"
   action:
     service: light.turn_on
     target:
