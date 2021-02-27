@@ -26,10 +26,16 @@
     event: sunset
     offset: "-00:45:00"
   condition:
-    condition: state
-    entity_id: person.jack
-    state: home
+    - condition: or
+      conditions:
+        - before: sunrise
+          condition: sun
+        - after: sunset
+          condition: sun
+    - condition: state
+      entity_id: person.jack
+      state: home
   action:
     service: light.turn_on
     target:
-      entity_id: light.sofa
+      entity_id: light.sofa, light.bed
