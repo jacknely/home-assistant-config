@@ -5,7 +5,7 @@
 ####################################################
 # https://www.home-assistant.io/integrations/default_config/
 # Configure a default setup of Home Assistant (frontend, api, etc)
-#default_config:
+default_config:
 person:
 updater:
 zone:
@@ -17,6 +17,7 @@ map:
 logbook:
 config:
 history:
+mobile_app:
 api:
 logger:
   default: info
@@ -52,7 +53,6 @@ tts:
 
 alexa:
   smart_home:
-mobile_app:
 
 group: !include groups.yaml
 automation: !include automations.yaml
