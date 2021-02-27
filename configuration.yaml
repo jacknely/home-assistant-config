@@ -5,7 +5,7 @@
 ####################################################
 # https://www.home-assistant.io/integrations/default_config/
 # Configure a default setup of Home Assistant (frontend, api, etc)
-default_config:
+#default_config:
 person:
 updater:
 zone:
@@ -31,7 +31,7 @@ logger:
 # https://home-assistant.io/docs/configuration/basic/
 homeassistant:
   external_url: "https://jacknelson.info"
-  internal_url: "http://192.168.1.121:8123"
+  internal_url: "http://192.168.1.154:8123"
   latitude: 51.4665
   longitude: -0.1416
   unit_system: metric
@@ -58,6 +58,9 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
+
+frontend:
+  themes: !include_dir_merge_named themes
 
 ####################################################
 #                                                  #
