@@ -27,10 +27,6 @@
     - condition: state
       entity_id: sun.sun
       state: below_horizon
-    - condition: numeric_state
-      entity_id: sun.sun
-      value_template: "{{ state.attributes.elevation }}"
-      below: 2.0
     - condition: state
       entity_id: light.sofa
       state: "off"
