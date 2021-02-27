@@ -1,1 +1,10 @@
-[]
+automation:
+  - alias: "Work Scene"
+    trigger:
+      platform: state
+      entity_id: binary_sensor.desk_sensor
+      to: "Detected"
+    action:
+      service: light.turn_on
+      target:
+        entity_id: light.desk
