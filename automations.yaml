@@ -1,11 +1,21 @@
-- alias: Turn on desk ligtht when there is movement
+- alias: Turn on desk light when office door is open
   initial_state: "on"
   trigger:
     platform: state
-    entity_id: binary_sensor.desk_sensor
-    to: "on"
+    entity_id: binary_sensor.office_door
+    to: "off"
   action:
     service: light.turn_on
+    entity_id: light.desk
+
+- alias: Turn off desk light when office door is closed
+  initial_state: "on"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.office_door
+    to: "on"
+  action:
+    service: light.turn_off
     entity_id: light.desk
 
 - alias: Turn off desk light 10 minutes after last movement
