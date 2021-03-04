@@ -19,7 +19,7 @@
     entity_id: light.desk
 
 - id: e6d88513c8e44aaf959d79f90b0bf211
-  alias: Turn bedroom lights on when Jack is home
+  alias: Turn bedroom lights on when motion detected
   trigger:
     platform: state
     entity_id: binary_sensor.bedroom_sensor
@@ -29,7 +29,7 @@
       entity_id: light.sofa
       state: "off"
     - condition: time
-      after: "07:30"
+      after: "08:30"
       before: "21:30"
   action:
     - entity_id: group.main_lights
@@ -45,7 +45,7 @@
     entity_id: binary_sensor.bedroom_sensor
     to: "off"
     for:
-      minutes: 1
+      minutes: 10
   action:
     - entity_id: group.main_lights
       service: light.turn_off
