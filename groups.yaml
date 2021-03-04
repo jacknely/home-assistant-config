@@ -1,11 +1,12 @@
- lights:
-    name: Light Strips
-    entities:
-      - light.sofa
-      - light.bed
-      - light.terrarium
+light_strip:
+  name: Light Strips
+  entities:
+    - light.sofa
+    - light.bed
+    - light.terrarium
 
-    name: Main Lights
-    entities:
-      - light.light_1
-      - light.light_2
+main_lights:
+  name: Main Lights
+  entities:
+    - light.light_1
+    - light.light_2
