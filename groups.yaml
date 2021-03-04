@@ -1,4 +1,4 @@
-light_strip:
+light_strips:
   name: Light Strips
   entities:
     - light.sofa

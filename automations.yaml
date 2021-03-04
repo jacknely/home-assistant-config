@@ -29,5 +29,10 @@
       entity_id: light.sofa
       state: "off"
   action:
-    - entity_id: light.sofa
+    - data:
+        entity_id: main_lights
+        brightness_pct: 50
+      service: light.turn_on
+    - data:
+        entity_id: light_strips
       service: light.turn_on
