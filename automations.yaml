@@ -35,7 +35,7 @@
     - entity_id: group.main_lights
       service: light.turn_on
       data:
-        brightness: 60
+        brightness: 40
     - entity_id: group.light_strips
       service: light.turn_on
 
@@ -48,6 +48,4 @@
       minutes: 1
   action:
     - entity_id: group.main_lights
-      service: light.turn_off
-    - entity_id: group.light_strips
       service: light.turn_off
