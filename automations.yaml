@@ -21,10 +21,10 @@
 - id: e6d88513c8e44aaf959d79f90b0bf211
   alias: Turn bedroom lights on when Jack is home
   trigger:
+    platform: state
+    entity_id: binary_sensor.bedroom_sensor
+    to: "on"
   condition:
-    - condition: state
-      entity_id: sun.sun
-      state: below_horizon
     - condition: state
       entity_id: light.sofa
       state: "off"
