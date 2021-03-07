@@ -30,7 +30,7 @@
       state: "off"
     - condition: time
       after: "08:30"
-      before: "21:30"
+      before: "21:45"
   action:
     - entity_id: group.main_lights
       service: light.turn_on
