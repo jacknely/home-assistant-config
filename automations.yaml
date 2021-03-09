@@ -25,9 +25,12 @@
     entity_id: binary_sensor.bedroom_sensor
     to: "on"
   condition:
+    - condition: state
+      entity_id: light.sofa
+      state: "off"
     - condition: time
       after: "08:30"
-      before: "21:45"
+      before: "21:30"
   action:
     - entity_id: group.main_lights
       service: light.turn_on
