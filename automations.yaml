@@ -45,7 +45,9 @@
     entity_id: binary_sensor.bedroom_sensor
     to: "off"
     for:
-      minutes: 1
+      minutes: 4
   action:
     - entity_id: group.main_lights
       service: light.turn_off
+    - entity_id: group.light_strips
+      service: light.turn_on
