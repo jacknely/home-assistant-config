@@ -26,7 +26,7 @@
     to: "on"
   condition:
     - condition: state
-      entity_id: light.sofa
+      entity_id: group.main_lights
       state: "off"
     - condition: time
       after: "08:30"
@@ -34,8 +34,6 @@
   action:
     - entity_id: group.main_lights
       service: light.turn_on
-      data:
-        brightness: 40
     - entity_id: group.light_strips
       service: light.turn_on
 
