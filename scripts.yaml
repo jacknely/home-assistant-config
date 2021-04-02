@@ -8,4 +8,4 @@ make_coffee:
         - condition: state
           entity_id: sensor.smarter_coffee_carafe
           state: "True"
-    - service: rest_command.make_coffe
+    - service: rest_command.make_coffee
