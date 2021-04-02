@@ -21,6 +21,8 @@ mobile_app:
 api:
 logger:
   default: info
+logs:
+  homeassistant.components.rest_command: debug
 
 ####################################################
 #                                                  #
@@ -104,8 +106,5 @@ sensor:
 rest_command:
   make_coffee:
     url: "http://192.168.1.154:2080/api/192.168.1.126/brew/default/"
-    method: GET
-    headers:
-      accept: "application/json, text/html"
-    payload: "{}"
-    content_type: "application/json; charset=utf-8"
+    method: get
+    payload: ""
