@@ -21,8 +21,8 @@ mobile_app:
 api:
 logger:
   default: info
-logs:
-  homeassistant.components.rest_command: debug
+  logs:
+    homeassistant.components.rest_command: debug
 
 ####################################################
 #                                                  #
