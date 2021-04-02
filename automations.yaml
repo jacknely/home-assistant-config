@@ -30,7 +30,7 @@
       state: "off"
     - condition: time
       after: "08:30"
-      before: "21:30"
+      before: "20:00"
   action:
     - entity_id: group.main_lights
       service: light.turn_on
@@ -43,7 +43,7 @@
     entity_id: binary_sensor.bedroom_sensor
     to: "off"
     for:
-      minutes: 4
+      minutes: 15
   action:
     - entity_id: group.main_lights
       service: light.turn_off

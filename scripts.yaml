@@ -1,0 +1,11 @@
+make_coffee:
+  sequence:
+    - condition: and
+      conditions:
+        - condition: state
+          entity_id: sensor.smarter_coffee_enoughwater
+          state: "1"
+        - condition: state
+          entity_id: sensor.smarter_coffee_carafe
+          state: "True"
+    - service: rest_command.make_coffe
