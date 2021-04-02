@@ -1,11 +1,13 @@
 make_coffee:
-  sequence:
-    - condition: and
-      conditions:
-        - condition: state
-          entity_id: sensor.smarter_coffee_enoughwater
-          state: "1"
-        - condition: state
-          entity_id: sensor.smarter_coffee_carafe
-          state: "True"
-    - service: rest_command.make_coffee
+  - id: e6d88513c8e44aaf959d79f90b0bf219
+    alias: Make Coffee
+    sequence:
+      - condition: and
+        conditions:
+          - condition: state
+            entity_id: sensor.smarter_coffee_enoughwater
+            state: "1"
+          - condition: state
+            entity_id: sensor.smarter_coffee_carafe
+            state: "True"
+      - service: rest_command.make_coffee
