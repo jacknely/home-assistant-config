@@ -89,6 +89,18 @@ sensor:
     scan_interval: 20
     value_template: "{{ value_json.status.ready }}"
 
+  - platform: rest
+    resource: http://192.168.1.154:2080/api/192.168.1.126/status
+    name: smarter_coffee_enoughwater
+    scan_interval: 20
+    value_template: "{{ value_json.status.enoughwater }}"
+
+  - platform: rest
+    resource: http://192.168.1.154:2080/api/192.168.1.126/status
+    name: smarter_coffee_carafe
+    scan_interval: 20
+    value_template: "{{ value_json.status.carafe }}"
+
 rest_command:
   make_coffee:
     url: "http://192.168.1.154:2080/api/192.168.1.126/brew/default"
