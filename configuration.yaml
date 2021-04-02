@@ -58,7 +58,6 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
-sensor: !include sensor.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
@@ -77,3 +76,19 @@ mqtt:
   will_message:
     topic: "homeassistant/status"
     payload: "offline"
+
+####################################################
+#                                                  #
+#                    COFFEE                        #
+#                                                  #
+####################################################
+sensor:
+  - platform: rest
+    resource: http://192.168.1.154:2080/api/192.168.1.126/status
+    name: smarter_coffee_status
+    scan_interval: 20
+    value_template: "{{ value_json.status.ready }}"
+
+rest_command:
+  make_coffee:
+    url: "http://192.168.1.154:2080/api/192.168.1.126/brew/default"
