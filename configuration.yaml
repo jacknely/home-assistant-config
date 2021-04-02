@@ -104,3 +104,4 @@ sensor:
 rest_command:
   make_coffee:
     url: "http://192.168.1.154:2080/api/192.168.1.126/brew/default"
+    method: GET

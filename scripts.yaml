@@ -5,7 +5,7 @@ make_coffee:
       conditions:
         - condition: state
           entity_id: sensor.smarter_coffee_enoughwater
-          state: "1"
+          state: "True"
         - condition: state
           entity_id: sensor.smarter_coffee_carafe
           state: "True"
