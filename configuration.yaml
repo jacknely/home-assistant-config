@@ -107,3 +107,12 @@ rest_command:
   make_coffee:
     url: "http://192.168.1.154:2080/api/192.168.1.126/start"
     method: get
+
+####################################################
+#                                                  #
+#                    GOOGLE                        #
+#                                                  #
+####################################################
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
