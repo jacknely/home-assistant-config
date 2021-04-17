@@ -4,6 +4,7 @@
       ignore_availability: true
       name: Week Numbers
       track: true
+      max_results: 100
 
 - cal_id: en.uk#holiday@group.v.calendar.google.com
   entities:
@@ -11,6 +12,7 @@
       ignore_availability: true
       name: Holidays in United Kingdom
       track: true
+      max_results: 100
 
 - cal_id: jackn926@gmail.com
   entities:
@@ -18,6 +20,7 @@
       ignore_availability: true
       name: Jack Nelson (Personal)
       track: true
+      max_results: 100
 
 - cal_id: v3baepbvnkj8dk9qa194v32hq0r28cub@import.calendar.google.com
   entities:
@@ -25,6 +28,7 @@
       ignore_availability: true
       name: On Call Schedule for Digital Operations - Old schedule
       track: true
+      max_results: 100
 
 - cal_id: iaad175cnl0bvtv43t199pa4n33ej9md@import.calendar.google.com
   entities:
@@ -32,6 +36,7 @@
       ignore_availability: true
       name: On Call Schedule for Digital Operations
       track: true
+      max_results: 100
 
 - cal_id: jack.nelson@tails.com
   entities:
@@ -39,3 +44,4 @@
       ignore_availability: true
       name: jack.nelson@tails.com
       track: true
+      max_results: 100
