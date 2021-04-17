@@ -123,8 +123,7 @@ google:
 #                                                  #
 ####################################################
 
-- type: "custom:atomic-calendar-revive"
-  entities:
+entities:
   - entity: calendar.jack_nelson_tails_com
     titleColor: red
     whitelist: "word1,word2"
