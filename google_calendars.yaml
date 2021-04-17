@@ -1,0 +1,41 @@
+- cal_id: p#weeknum@group.v.calendar.google.com
+  entities:
+    - device_id: week_numbers
+      ignore_availability: true
+      name: Week Numbers
+      track: true
+
+- cal_id: en.uk#holiday@group.v.calendar.google.com
+  entities:
+    - device_id: holidays_in_united_kingdom
+      ignore_availability: true
+      name: Holidays in United Kingdom
+      track: true
+
+- cal_id: jackn926@gmail.com
+  entities:
+    - device_id: jack_nelson_personal
+      ignore_availability: true
+      name: Jack Nelson (Personal)
+      track: true
+
+- cal_id: v3baepbvnkj8dk9qa194v32hq0r28cub@import.calendar.google.com
+  entities:
+    - device_id: on_call_schedule_for_digital_operations_old_schedule
+      ignore_availability: true
+      name: On Call Schedule for Digital Operations - Old schedule
+      track: true
+
+- cal_id: iaad175cnl0bvtv43t199pa4n33ej9md@import.calendar.google.com
+  entities:
+    - device_id: on_call_schedule_for_digital_operations
+      ignore_availability: true
+      name: On Call Schedule for Digital Operations
+      track: true
+
+- cal_id: jack.nelson@tails.com
+  entities:
+    - device_id: jack_nelson_tails_com
+      ignore_availability: true
+      name: jack.nelson@tails.com
+      track: true
