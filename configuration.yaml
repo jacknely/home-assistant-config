@@ -122,10 +122,11 @@ google:
 #                  CALENDAR                        #
 #                                                  #
 ####################################################
-  - type: "custom:atomic-calendar-revive"
-    entities:
+
+- type: "custom:atomic-calendar-revive"
+  entities:
   - entity: calendar.jack_nelson_tails_com
     titleColor: red
-    whitelist: 'word1,word2'
+    whitelist: "word1,word2"
   - entity: calendar.jack_nelson_personal
     titleColor: blue
