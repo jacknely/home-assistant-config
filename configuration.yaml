@@ -104,6 +104,22 @@ sensor:
     scan_interval: 20
     value_template: "{{ value_json.status.carafe }}"
 
+  - platform: time_date
+    display_options:
+      - "time"
+
+  - platform: template
+    sensors:
+      timetoevent:
+        friendly_name: Time to event
+        entity_id: sensor.time
+        value_template: >-
+          {% if states.calendar.jack_nelson_personal.attributes.start_time %}
+            {{((as_timestamp(states.calendar.jack_nelson_personal.attributes.start_time) - as_timestamp(now())) / 60) | default(10) | int }}
+          {%- else -%}
+            0
+          {%- endif %}
+
 rest_command:
   make_coffee:
     url: "http://192.168.1.154:2080/api/192.168.1.126/start"

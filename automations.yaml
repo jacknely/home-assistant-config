@@ -73,6 +73,10 @@
     platform: state
     entity_id: calendar.jack_nelson_personal
     to: "on"
+  trigger:
+    platform: state
+    entity_id: sensor.timetoleavealexamin
+    to: '120'
   action:
     - service: light.turn_on
       target:
@@ -80,7 +84,27 @@
       data:
         brightness: 200
         rgb_color: [0, 255, 0]
-        flash: long
+        flash: short
+    - service: notify.alexa_media_jack_s_echo_dot
+      data:
+        message: You have an upcoming meeting
+        data:
+          type: announce
+
+- id: e6d88513c8esdk9
+  alias: "Personal Calendar Count Down"
+  trigger:
+    platform: state
+    entity_id: sensor.timetoleavealexamin
+    to: '5'
+  action:
+    - service: light.turn_on
+      target:
+        entity_id: group.light_strips
+      data:
+        brightness: 200
+        rgb_color: [0, 255, 0]
+        flash: short
     - service: notify.alexa_media_jack_s_echo_dot
       data:
         message: You have an upcoming meeting
