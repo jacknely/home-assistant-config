@@ -80,3 +80,9 @@
       data:
         brightness: 200
         rgb_color: [0, 255, 0]
+    - service: media_player.alexa_tts
+      data:
+        {
+          "entity_id": "media_player.jack_s_echo_dot",
+          "message": "You have a event starting now",
+        }

@@ -116,3 +116,16 @@ rest_command:
 google:
   client_id: !secret google_client_id
   client_secret: !secret google_client_secret
+
+####################################################
+#                                                  #
+#                    ALEXA                         #
+#                                                  #
+####################################################
+alexa_media:
+  accounts:
+    - email: !secret amazon_user
+      password: !secret amazon_password
+      url: amazon.co.uk
+      include_devices:
+        - "Jack's Echo Dot"
