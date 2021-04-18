@@ -80,9 +80,9 @@
       data:
         brightness: 200
         rgb_color: [0, 255, 0]
-    - service: media_player.alexa_tts
+        flash: long
+    - service: notify.alexa_media_jack_s_echo_dot
       data:
-        {
-          "entity_id": "media_player.jack_s_echo_dot",
-          "message": "You have a event starting now",
-        }
+        message: You have an upcoming meeting
+        data:
+          type: announce
