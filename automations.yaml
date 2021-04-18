@@ -95,7 +95,7 @@
   alias: "Personal Calendar Count Down"
   trigger:
     platform: state
-    entity_id: sensor.timetoleavealexamin
+    entity_id: sensor.timetoevent
     to: '5'
   action:
     - service: light.turn_on
