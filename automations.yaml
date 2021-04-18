@@ -54,7 +54,7 @@
       service: light.turn_off
 
 - id: e6d88513c8esdk90b0bf211
-  alias: "Jacks Meetings"
+  alias: "Tails Meetings"
   trigger:
     platform: state
     entity_id: calendar.jack_nelson_tails_com
@@ -64,5 +64,19 @@
       target:
         entity_id: group.light_strips
       data:
-        brightness: 130
+        brightness: 200
         rgb_color: [255, 0, 0]
+
+- id: e6d88513c8esdk9ll
+  alias: "Personal Calendar"
+  trigger:
+    platform: state
+    entity_id: calendar.jack_nelson_personal
+    to: "on"
+  action:
+    - service: light.turn_on
+      target:
+        entity_id: group.light_strips
+      data:
+        brightness: 200
+        rgb_color: [0, 255, 0]
