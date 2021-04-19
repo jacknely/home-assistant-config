@@ -10,3 +10,12 @@ make_coffee:
           entity_id: sensor.smarter_coffee_carafe
           state: "True"
     - service: rest_command.make_coffee
+
+flash_lights:
+  sequence:
+    repeat:
+      count: 5
+      sequence:
+        - service: light.toggle
+          entity_id: group.light_strips
+        - delay: "00:00:05"
