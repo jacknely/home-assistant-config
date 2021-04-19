@@ -67,7 +67,7 @@
     - service: light.turn_on
       entity_id: group.light_strips
       data:
-        brightness: 255
+        brightness: 180
         rgb_color: [255, 0, 0]
     - service: script.flash_lights
     - service: notify.alexa_media_jack_s_echo_dot
@@ -95,7 +95,7 @@
     - service: light.turn_on
       entity_id: group.light_strips
       data:
-        brightness: 255
+        brightness: 180
         rgb_color: [0, 255, 0]
     - service: script.flash_lights
     - service: notify.alexa_media_jack_s_echo_dot
