@@ -14,7 +14,7 @@ make_coffee:
 flash_lights:
   sequence:
     repeat:
-      count: 10
+      count: 6
       sequence:
         - service: light.toggle
           entity_id: group.light_strips
