@@ -60,6 +60,11 @@
     entity_id: sensor.timetoevent
     to: "5"
   action:
+    - service: light.turn_on
+      entity_id: group.light_strips
+      data:
+        brightness: 255
+        rgb_color: [255, 0, 0]
     - service: script.flash_lights
     - service: notify.alexa_media_jack_s_echo_dot
       data:
@@ -69,7 +74,7 @@
     - service: light.turn_on
       entity_id: group.light_strips
       data:
-        brightness: 1800
+        brightness: 180
         rgb_color: [254, 207, 255]
 
 - id: e6d88513c8esdk9
@@ -79,6 +84,11 @@
     entity_id: sensor.timetoevent
     to: "5"
   action:
+    - service: light.turn_on
+      entity_id: group.light_strips
+      data:
+        brightness: 255
+        rgb_color: [0, 255, 0]
     - service: script.flash_lights
     - service: notify.alexa_media_jack_s_echo_dot
       data:
@@ -89,4 +99,4 @@
       entity_id: group.light_strips
       data:
         brightness: 180
-        rgb_color: [0, 255, 0]
+        rgb_color: [254, 207, 255]
