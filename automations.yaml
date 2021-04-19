@@ -57,7 +57,7 @@
   alias: "Work Calendar"
   trigger:
     platform: state
-    entity_id: sensor.timetoevent
+    entity_id: sensor.time_to_next_work_event
     to: "5"
   condition:
     - condition: state
@@ -85,7 +85,7 @@
   alias: "Personal Calendar"
   trigger:
     platform: state
-    entity_id: sensor.timetoevent
+    entity_id: sensor.time_to_next_personal_event
     to: "5"
   condition:
     - condition: state
