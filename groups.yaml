@@ -4,6 +4,7 @@ light_strips:
     - light.sofa
     - light.bed
     - light.terrarium
+    - light.desk
 
 main_lights:
   name: Main Lights

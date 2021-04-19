@@ -74,6 +74,12 @@
     entity_id: sensor.timetoevent
     to: "5"
   action:
+    - service: script.flash_lights
+    - service: notify.alexa_media_jack_s_echo_dot
+      data:
+        message: Hi, {{ state_attr('calendar.jack_nelson_personal', 'message') }} is starting shortly.
+        data:
+          type: announce
     - service: light.turn_on
       target:
         entity_id: group.light_strips
@@ -81,8 +87,3 @@
         brightness: 200
         rgb_color: [0, 255, 0]
         flash: short
-    - service: notify.alexa_media_jack_s_echo_dot
-      data:
-        message: Hi, {{ state_attr('calendar.jack_nelson_personal', 'message') }} is starting shortly.
-        data:
-          type: announce

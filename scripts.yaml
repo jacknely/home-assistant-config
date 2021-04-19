@@ -14,8 +14,8 @@ make_coffee:
 flash_lights:
   sequence:
     repeat:
-      count: 5
+      count: 10
       sequence:
         - service: light.toggle
           entity_id: group.light_strips
-        - delay: "00:00:05"
+        - delay: "00:00:01"
