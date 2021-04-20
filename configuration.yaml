@@ -112,19 +112,14 @@ sensor:
     sensors:
       time_to_personal_event:
         friendly_name: Time to Next Personal Event
-        entity_id: sensor.time
         value_template: >-
           {% if states.calendar.calendar.jack_nelson_personal.attributes.start_time %}
             {{((as_timestamp(states.calendar.calendar.jack_nelson_personal.attributes.start_time) - as_timestamp(now())) / 60) | default(10) | int }}
           {%- else -%}
             0
           {%- endif %}
-
-  - platform: template
-    sensors:
       time_to_work_event:
         friendly_name: Time to Next Work Event
-        entity_id: sensor.time
         value_template: >-
           {% if states.calendar.jack_nelson_tails_com.attributes.start_time %}
             {{((as_timestamp(states.calendar.jack_nelson_tails_com.attributes.start_time) - as_timestamp(now())) / 60) | default(10) | int }}
