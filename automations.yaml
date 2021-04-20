@@ -57,7 +57,7 @@
   alias: "Work Calendar"
   trigger:
     platform: state
-    entity_id: sensor.time_to_next_work_event
+    entity_id: sensor.time_to_work_event
     to: "5"
   condition:
     - condition: state
@@ -81,11 +81,11 @@
         brightness: 180
         rgb_color: [254, 207, 255]
 
-- id: e6d88513c8esdk9
+- id: e6d88513c8esdk9sdf
   alias: "Personal Calendar"
   trigger:
     platform: state
-    entity_id: sensor.time_to_next_personal_event
+    entity_id: sensor.time_to_personal_event
     to: "5"
   condition:
     - condition: state
