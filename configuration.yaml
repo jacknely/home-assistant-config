@@ -152,3 +152,13 @@ alexa_media:
       url: amazon.co.uk
       include_devices:
         - "Jack's Echo Dot"
+
+####################################################
+#                                                  #
+#                    TUYA                          #
+#                                                  #
+####################################################
+tuya:
+  username: jackn926@gmail.com
+  password: !secret tuya_password
+  country_code: 44
