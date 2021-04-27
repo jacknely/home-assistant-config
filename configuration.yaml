@@ -158,9 +158,10 @@ alexa_media:
 #                   OCTOPRINT                      #
 #                                                  #
 ####################################################
+ffmpeg:
 camera:
-  - platform: mjpeg
+  - platform: ffmpeg
     name: 3D Printer
     still_image_url: http://192.168.1.121:9999/webcam/?action=snapshot
     mjpeg_url: http://192.168.1.121:9999/webcam/?action=stream
-    extra_arguments: -rot -90
+    extra_arguments: -vf "transpose=1"
