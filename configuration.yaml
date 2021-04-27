@@ -155,10 +155,11 @@ alexa_media:
 
 ####################################################
 #                                                  #
-#                    TUYA                          #
+#                   OCTOPRINT                      #
 #                                                  #
 ####################################################
-tuya:
-  username: jackn926@gmail.com
-  password: !secret tuya_password
-  country_code: 44
+camera:
+  - platform: mjpeg
+    name: 3D Printer
+    still_image_url: http://http://192.168.1.121:9999/webcam/?action=snapshot
+    mjpeg_url: http://http://192.168.1.121:9999/webcam/?action=stream
