@@ -104,6 +104,15 @@ sensor:
     scan_interval: 20
     value_template: "{{ value_json.status.carafe }}"
 
+  - platform: fitbit
+    clock_format: 24H
+    monitored_resources:
+      - "body/weight"
+      - "activities/calories"
+      - "activities/steps"
+      - "sleep/minutesAsleep"
+      - "body/bmi"
+
   - platform: time_date
     display_options:
       - "time"
