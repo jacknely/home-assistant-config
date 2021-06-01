@@ -23,6 +23,8 @@ logger:
   default: info
   logs:
     homeassistant.components.rest_command: debug
+http:
+  base_url: https://www.jacknelson.info
 
 ####################################################
 #                                                  #
