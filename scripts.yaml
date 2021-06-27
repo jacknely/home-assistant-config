@@ -21,11 +21,7 @@ flash_lights:
         - delay: "00:00:01"
 
 tv_power:
-  sequence:
-    - service: remote.send_command
-      target:
-        entity_id: remote.bedroom
-      data:
-        device: tv
-        command:
-          - b64:JgBcABQRFBITEhMSFBEUERQ2FBITNhQ2FDYUNhQ2FDYUERQ2FBITNhQSExITNxMSFBEUERU1FBITNhQ3ExITNhQ2FDYUAAUeAAEoSRQADFMAASdJFAAMUgABKUkTAA0FAAAAAAAAAAAAAA==
+  - service: remote.send_command
+    data:
+      entity_id: remote.bedroom
+      command: b64:JgBcABQRFBITEhMSFBEUERQ2FBITNhQ2FDYUNhQ2FDYUERQ2FBITNhQSExITNxMSFBEUERU1FBITNhQ3ExITNhQ2FDYUAAUeAAEoSRQADFMAASdJFAAMUgABKUkTAA0FAAAAAAAAAAAAAA==
