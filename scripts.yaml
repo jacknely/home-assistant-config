@@ -26,5 +26,6 @@ tv_power:
       target:
         entity_id: remote.bedroom
       data:
+        device: tv
         command:
           - JgBcABQRFBITEhMSFBEUERQ2FBITNhQ2FDYUNhQ2FDYUERQ2FBITNhQSExITNxMSFBEUERU1FBITNhQ3ExITNhQ2FDYUAAUeAAEoSRQADFMAASdJFAAMUgABKUkTAA0FAAAAAAAAAAAAAA==
