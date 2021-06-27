@@ -19,3 +19,12 @@ flash_lights:
         - service: light.toggle
           entity_id: group.light_strips
         - delay: "00:00:01"
+
+tv_power:
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        command:
+          - JgBcABQRFBITEhMSFBEUERQ2FBITNhQ2FDYUNhQ2FDYUERQ2FBITNhQSExITNxMSFBEUERU1FBITNhQ3ExITNhQ2FDYUAAUeAAEoSRQADFMAASdJFAAMUgABKUkTAA0FAAAAAAAAAAAAAA==
