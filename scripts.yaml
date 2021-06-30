@@ -23,6 +23,8 @@ flash_lights:
 tv_power:
   sequence:
     - service: remote.send_command
-      data:
+      target:
         entity_id: remote.bedroom
-        command: b64:JgBcABQRFBITEhMSFBEUERQ2FBITNhQ2FDYUNhQ2FDYUERQ2FBITNhQSExITNxMSFBEUERU1FBITNhQ3ExITNhQ2FDYUAAUeAAEoSRQADFMAASdJFAAMUgABKUkTAA0FAAAAAAAAAAAAAA==
+      data:
+        device: tv
+        command: power
