@@ -38,7 +38,9 @@ chromecast:
         device: tv
         command:
           - 1
+          - delay: "00:00:02"
           - source
+          - delay: "00:00:02"
           - 4
 
 desktop:
@@ -50,7 +52,9 @@ desktop:
         device: tv
         command:
           - 1
+          - delay: "00:00:02"
           - source
+          - delay: "00:00:02"
           - 3
 
 amazon:
@@ -60,9 +64,7 @@ amazon:
         entity_id: remote.bedroom
       data:
         device: tv
-        command:
-          - 1
-          - amazon
+        command: amazon
 
 netflix:
   sequence:
@@ -71,6 +73,4 @@ netflix:
         entity_id: remote.bedroom
       data:
         device: tv
-        command:
-          - 1
-          - netflix
+        command: netflix
