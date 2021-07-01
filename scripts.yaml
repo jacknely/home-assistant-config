@@ -102,6 +102,12 @@ chromecast:
         entity_id: remote.bedroom
       data:
         device: tv
+        command: power
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
         command: 1
     - delay: 3
     - service: remote.send_command
