@@ -28,3 +28,49 @@ tv_power:
       data:
         device: tv
         command: power
+
+chromecast:
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command:
+          - 1
+          - source
+          - 4
+
+desktop:
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command:
+          - 1
+          - source
+          - 3
+
+amazon:
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command:
+          - 1
+          - amazon
+
+netflix:
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command:
+          - 1
+          - netflix
