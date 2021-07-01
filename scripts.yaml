@@ -12,6 +12,7 @@ make_coffee:
     - service: rest_command.make_coffee
 
 flash_lights:
+  alias: Flash Lights
   sequence:
     repeat:
       count: 6
@@ -21,6 +22,7 @@ flash_lights:
         - delay: "00:00:01"
 
 tv_on:
+  alias: TV On
   sequence:
     - service: remote.send_command
       target:
@@ -30,7 +32,7 @@ tv_on:
         command: 1
 
 tv_off:
-  alias: tv off
+  alias: TV Off
   sequence:
     - service: remote.send_command
       target:
@@ -40,7 +42,7 @@ tv_off:
         command: power
 
 desktop:
-  alias: desktop
+  alias: Desktop
   sequence:
     - service: remote.send_command
       target:
@@ -48,7 +50,7 @@ desktop:
       data:
         device: tv
         command: 1
-    - delay: 6
+    - delay: 7
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -64,6 +66,7 @@ desktop:
         command: 3
 
 amazon:
+  alias: Amazon
   sequence:
     - service: remote.send_command
       target:
@@ -71,7 +74,7 @@ amazon:
       data:
         device: tv
         command: 1
-    - delay: 6
+    - delay: 7
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -80,6 +83,7 @@ amazon:
         command: amazon
 
 netflix:
+  alias: Netflix
   sequence:
     - service: remote.send_command
       target:
@@ -87,7 +91,7 @@ netflix:
       data:
         device: tv
         command: 1
-    - delay: 6
+    - delay: 7
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -96,7 +100,7 @@ netflix:
         command: netflix
 
 chromecast:
-  alias: chromecast
+  alias: Chromecast
   sequence:
     - service: remote.send_command
       target:
@@ -104,7 +108,7 @@ chromecast:
       data:
         device: tv
         command: 1
-    - delay: 6
+    - delay: 7
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
