@@ -73,7 +73,6 @@ chromecast:
     - delay: 1
     - service: remote.send_command
       target:
-        device: tv
         entity_id: remote.bedroom
       data:
         device: tv
@@ -81,7 +80,6 @@ chromecast:
     - delay: 1
     - service: remote.send_command
       target:
-        device: tv
         entity_id: remote.bedroom
       data:
         device: tv
