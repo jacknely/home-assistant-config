@@ -48,7 +48,7 @@ desktop:
       data:
         device: tv
         command: 1
-    - delay: 3
+    - delay: 6
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -71,7 +71,7 @@ amazon:
       data:
         device: tv
         command: 1
-    - delay: 3
+    - delay: 6
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -87,7 +87,7 @@ netflix:
       data:
         device: tv
         command: 1
-    - delay: 3
+    - delay: 6
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
