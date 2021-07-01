@@ -29,20 +29,6 @@ tv_power:
         device: tv
         command: power
 
-chromecast:
-  sequence:
-    - service: remote.send_command
-      target:
-        entity_id: remote.bedroom
-      data:
-        device: tv
-        command:
-          - "1"
-          - delay: "00:00:02"
-          - source
-          - delay: "00:00:02"
-          - "4"
-
 desktop:
   sequence:
     - service: remote.send_command
@@ -74,3 +60,27 @@ netflix:
       data:
         device: tv
         command: netflix
+
+chromecast:
+  alias: chromecast
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+    - delay: 1
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: source
+    - delay: 1
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: chromecast
