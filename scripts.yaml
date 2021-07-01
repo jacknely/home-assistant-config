@@ -20,7 +20,16 @@ flash_lights:
           entity_id: group.light_strips
         - delay: "00:00:01"
 
-tv_power:
+tv_on:
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+
+tv_off:
   sequence:
     - service: remote.send_command
       target:
@@ -30,21 +39,38 @@ tv_power:
         command: power
 
 desktop:
+  alias: desktop
   sequence:
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
       data:
         device: tv
-        command:
-          - "1"
-          - delay: "00:00:02"
-          - source
-          - delay: "00:00:02"
-          - "3"
+        command: 1
+    - delay: 2
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: source
+    - delay: 1
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 3
 
 amazon:
   sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+    - delay: 2
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -54,6 +80,13 @@ amazon:
 
 netflix:
   sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+    - delay: 2
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -70,7 +103,7 @@ chromecast:
       data:
         device: tv
         command: 1
-    - delay: 1
+    - delay: 2
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
