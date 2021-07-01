@@ -30,6 +30,7 @@ tv_on:
         command: 1
 
 tv_off:
+  alias: tv off
   sequence:
     - service: remote.send_command
       target:
@@ -102,14 +103,8 @@ chromecast:
         entity_id: remote.bedroom
       data:
         device: tv
-        command: power
-    - service: remote.send_command
-      target:
-        entity_id: remote.bedroom
-      data:
-        device: tv
         command: 1
-    - delay: 3
+    - delay: 6
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
