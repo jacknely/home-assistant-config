@@ -37,11 +37,11 @@ chromecast:
       data:
         device: tv
         command:
-          - 1
+          - "1"
           - delay: "00:00:02"
           - source
           - delay: "00:00:02"
-          - 4
+          - "4"
 
 desktop:
   sequence:
@@ -51,11 +51,11 @@ desktop:
       data:
         device: tv
         command:
-          - 1
+          - "1"
           - delay: "00:00:02"
           - source
           - delay: "00:00:02"
-          - 3
+          - "3"
 
 amazon:
   sequence:
