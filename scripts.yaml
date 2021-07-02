@@ -122,3 +122,72 @@ chromecast:
       data:
         device: tv
         command: 4
+
+bbc_one:
+  alias: BBC One
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+    - delay: 7
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 6
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 4
+
+bbc_news:
+  alias: BBC News
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+    - delay: 7
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 6
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 7
+
+itv:
+  alias: ITV
+  sequence:
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 1
+    - delay: 7
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 7
+    - service: remote.send_command
+      target:
+        entity_id: remote.bedroom
+      data:
+        device: tv
+        command: 5
