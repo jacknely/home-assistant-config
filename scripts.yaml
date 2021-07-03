@@ -139,6 +139,7 @@ bbc_one:
       data:
         device: tv
         command: 6
+    - delay: 1
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -162,6 +163,7 @@ bbc_news:
       data:
         device: tv
         command: 6
+    - delay: 1
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
@@ -185,6 +187,7 @@ itv:
       data:
         device: tv
         command: 7
+    - delay: 1
     - service: remote.send_command
       target:
         entity_id: remote.bedroom
