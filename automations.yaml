@@ -1,4 +1,4 @@
-- id: e6d88513c8e44aaf959d79f90b0244211
+desk_light_on:
   alias: Turn on desk light when office door is open
   initial_state: "on"
   trigger:

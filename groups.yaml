@@ -11,3 +11,13 @@ main_lights:
   entities:
     - light.light_1
     - light.light_2
+
+home_automations:
+  name: Automations & Scripts
+  entities:
+    - automation.turn_bedroom_lights_on_when_jack_is_home
+    - automation.turn_off_bedroom_light_when_jack_is_not_home
+    - automation.turn_off_desk_light_10_minutes_after_last_movement
+    - automation.turn_off_desk_light_when_office_door_is_closed
+    - automation.turn_on_desk_light_when_office_door_is_open
+    - automation.jacks_meetings
