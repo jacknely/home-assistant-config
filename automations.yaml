@@ -1,5 +1,5 @@
-desk_light_on:
-  alias: Turn on desk light when office door is open
+automation desk_light_on:
+  - alias: Turn on desk light when office door is open
   initial_state: "on"
   trigger:
     platform: state
