@@ -1,9 +1,13 @@
 - id: arm_blink_when_away
   alias: "Arm Blink When Away"
+  condition:
+    - condition: state
+      entity_id: "person.jack"
+      state: "not_home"
   trigger:
     platform: state
     entity_id: binary_sensor.bedroom_sensor
-    to: "off"
+    to: "on"
   action:
     service: alarm_control_panel.alarm_arm_away
     target:
