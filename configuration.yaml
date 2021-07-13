@@ -49,7 +49,7 @@ homeassistant:
         - ::1
         - fd00::/8
   time_zone: Europe/London
-  whitelist_external_dirs:
+  allowlist_external_dirs:
     - /config
     - /tmp
     - /camera_vids
