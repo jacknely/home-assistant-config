@@ -1,15 +1,22 @@
 - id: arm_blink_when_away
   alias: "Arm Blink When Away"
-  condition:
-    - condition: state
-      entity_id: "person.jack"
-      state: "not_home"
   trigger:
     platform: state
-    entity_id: binary_sensor.bedroom_sensor
-    to: "on"
+    entity_id: person.jack
+    to: "not_home"
   action:
     service: alarm_control_panel.alarm_arm_away
+    target:
+      entity_id: alarm_control_panel.blink_camera_1
+
+- id: disarm_blink_when_present
+  alias: "Disarm Blink When Home"
+  trigger:
+    platform: state
+    entity_id: person.jack
+    to: "home"
+  action:
+    service: alarm_control_panel.alarm_disarm
     target:
       entity_id: alarm_control_panel.blink_camera_1
 
