@@ -1,3 +1,14 @@
+- id: arm_blink_when_away
+  alias: "Arm Blink When Away"
+  trigger:
+    platform: state
+    entity_id: binary_sensor.bedroom_sensor
+    to: "off"
+  action:
+    service: alarm_control_panel.alarm_arm_away
+    target:
+      entity_id: alarm_control_panel.blink_camera_1
+
 - id: e6d88513c8e44aaf959d79f90b0244211
   alias: Turn on desk light when office door is open
   initial_state: "on"

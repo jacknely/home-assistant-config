@@ -51,6 +51,9 @@ homeassistant:
   time_zone: Europe/London
   whitelist_external_dirs:
     - /config
+  allowlist_external_dirs:
+    - /tmp
+    - /camera_vids
 
 # Text to speech
 tts:
