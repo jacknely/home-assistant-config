@@ -125,7 +125,7 @@ sensor:
       time_to_personal_event:
         friendly_name: Time to Next Personal Event
         value_template: >-
-          {% if (( states.calendar.jack_nelson_personal.attributes.start_time ) and ( states.calendar.jack_nelson_personal.attributes.message[:1] != "--" )  %}
+          {% if ( ( states.calendar.jack_nelson_personal.attributes.start_time ) and ( states.calendar.jack_nelson_personal.attributes.message[:1] != "--" ) ) %}
             {{((as_timestamp(states.calendar.jack_nelson_personal.attributes.start_time) - as_timestamp(now())) / 60) | default(10) | int }}
           {%- else -%}
             0
