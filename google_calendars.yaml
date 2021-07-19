@@ -22,14 +22,6 @@
       track: true
       max_results: 100
 
-- cal_id: v3baepbvnkj8dk9qa194v32hq0r28cub@import.calendar.google.com
-  entities:
-    - device_id: on_call_schedule_for_digital_operations_old_schedule
-      ignore_availability: true
-      name: On Call Schedule for Digital Operations - Old schedule
-      track: true
-      max_results: 100
-
 - cal_id: iaad175cnl0bvtv43t199pa4n33ej9md@import.calendar.google.com
   entities:
     - device_id: on_call_schedule_for_digital_operations
